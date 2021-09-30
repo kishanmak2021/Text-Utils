@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@700&display=swap');
+
+        h1,
+        h4,
+        span,
+        b,
+        p {
+            font-family: 'Ubuntu Mono', monospace;
+        }
+
+
+
+        pre {
+            margin-top: 0%;
+            margin-left: 30px;
+            border: 1px burlywood solid;
+            overflow-x: scroll;
+            width: 1200px;
+            height: 600px;
+        }
+    </style>
+
+    <title>Analyzing</title>
+
+</head>
+
+<body>
+    <h1>Your Analyzed Text I Here ...</h1>
+
+    <div id='text'>
+        <h4 style="font-style: italic;">You Chosen Purposes Are:
+            <b ><span id="purpose"></span></b>
+        </h4>
+        </h4>
+    </div>
+
+
+    <p>Analyzed Text :</p>
+
+
+   
+
+
+    <div>
+        <h2 style=" display: ruby-base-container;">
+            <pre><span id="ant"></span></pre>
+        </h2>
+    </div>
+
+
+    <script>
+        // Can also be included with a regular script tag
+
+        var a = "{{analyzed_text}} "
+        var p = "{{purpose}}"
+      
+        var options = {
+            strings: [a],
+            typeSpeed: 50,
+            startDelay: 1000,
+            loop: false,
+            content: 'html',
+
+        };
+        var options2 = {
+            strings:[p],
+            typeSpeed: 80,
+            startDelay: 800,
+            loop: false,
+        }
+
+        var ant = new Typed('#ant', options);
+        var purpose2 = new Typed('#purpose', options2)
+    </script>
+
+
+</body>
+
+</html>
